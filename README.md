@@ -36,7 +36,7 @@ Enter the number of Categories and SubCategories you would like to generate for 
 
 As for the SubCategories, they would contain the parent Category's number as well as an alphabetical letter indicating which SubCategory: SubCategory194A and SubCategory194B, SubCategory195A and SubCategory195B (total 4 SubCategories).
 
-[3]
+<img width="1427" alt="3" src="https://user-images.githubusercontent.com/6611854/61355328-b5399c80-a8a6-11e9-8815-f540648805f7.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ If an invalid username or email is entered, an error message will appear indicat
 
 If you would like to see the results of your Item Generator, go to the User page of your marketplace where you will be able to see the various listings created.
 
-[4]
+<img width="1433" alt="4" src="https://user-images.githubusercontent.com/6611854/61355167-5aa04080-a8a6-11e9-93b9-b101ddd9c235.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -71,3 +71,5 @@ Enter the number of Categories and SubCategories you would like to generate for 
 <img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61353887-6d654600-a8a3-11e9-883d-e6d39db13b39.png">
 
 In order to view your generated Transactions, go to your marketplace's Payments & Transactions page.
+
+<img width="1419" alt="3" src="https://user-images.githubusercontent.com/6611854/61355089-2dec2900-a8a6-11e9-9861-d6324696feb9.png">
