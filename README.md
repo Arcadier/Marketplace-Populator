@@ -16,11 +16,11 @@ Enter the number of Merchants and Buyers you would like to generate for your mar
 s:
 Merchant1773, Merchant1774, Merchant1775, Merchant1776, Merchant1777 (Basically 1773-1777).
 
-<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61351759-2fb1ee80-a89e-11e9-8962-e59a2447eb47.png">
+<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61354421-b8338d80-a8a4-11e9-8b9a-aa7e7a344741.png">
 
 The same applies to the usernames of Buyers. If you would like to see the complete list of your generated Users, go to your marketplace's User Management page.
 
-<img width="1419" alt="3" src="https://user-images.githubusercontent.com/6611854/61353152-af8d8800-a8a1-11e9-92a0-5d06b7e31e59.png">
+<img width="1419" alt="3" src="https://user-images.githubusercontent.com/6611854/61354472-d13c3e80-a8a4-11e9-9484-411bbad6c771.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
