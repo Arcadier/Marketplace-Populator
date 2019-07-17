@@ -12,12 +12,15 @@ To use the User Generator, click on the Users tab at the top of the page.
 
 <img width="1438" alt="1" src="https://user-images.githubusercontent.com/6611854/61351758-2f195800-a89e-11e9-8a55-378c8a8f6160.png">
 
-Enter the number of Merchants and Buyers you would like to generate for your marketplace. Click the blue "Generate Users" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the User number. For example, if you take a look at the screenshot below, the 5 Merchants that were created would have the following usernames:
+Enter the number of Merchants and Buyers you would like to generate for your marketplace. Click the blue "Generate Users" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the User number. For example, if you take a look at the screenshot below, the 5 Merchants that were created would have the following 
+s:
 Merchant1773, Merchant1774, Merchant1775, Merchant1776, Merchant1777 (Basically 1773-1777).
 
 <img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61351759-2fb1ee80-a89e-11e9-8962-e59a2447eb47.png">
 
 The same applies to the usernames of Buyers. If you would like to see the complete list of your generated Users, go to your marketplace's User Management page.
+
+<img width="1419" alt="3" src="https://user-images.githubusercontent.com/6611854/61353152-af8d8800-a8a1-11e9-92a0-5d06b7e31e59.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -25,9 +28,15 @@ The same applies to the usernames of Buyers. If you would like to see the comple
 
 To use the Category Generator, click on the Categories tab at the top of the page. 
 
+<img width="1433" alt="1" src="https://user-images.githubusercontent.com/6611854/61352171-4efd4b80-a89f-11e9-93f8-f12779d719fe.png">
 
+Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Category number. For example, if you take a look at the screenshot below, the 2 Categories that were created would have the following names: Category194 and Category195.
 
-Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you received the Success message, the numbers within the \[\] brackets indicate the Category number. For example, if you take a look at the screenshot below, the 2 Categories that were created would have the following usernames: Category194 and Category195.
+<img width="1429" alt="2" src="https://user-images.githubusercontent.com/6611854/61352173-4efd4b80-a89f-11e9-92ed-ecbc5e71f753.png">
+
+As for the SubCategories, they would contain the parent Category's number as well as an alphabetical letter indicating which SubCategory: SubCategory194A and SubCategory194B, SubCategory195A and SubCategory195B (total 4 SubCategories).
+
+[3]
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -35,7 +44,15 @@ Enter the number of Categories and SubCategories you would like to generate for 
 
 To use the Item Generator, click on the Items tab at the top of the page. 
 
-Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you received the Success message, the numbers within the \[\] brackets indicate the Category number. If you take a look at the screenshot below, the 
+<img width="1435" alt="1" src="https://user-images.githubusercontent.com/6611854/61352743-b2d44400-a8a0-11e9-8ca0-2a5bf4d20997.png">
+
+Enter the number of Items, and under which Merchant (by username), you would like to generate for your marketplace. Click the blue "Generate Items" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Item number. If you take a look at the screenshot below, the 4 Items that were created would have the following names: Item547, Item548, Item549, Item550 (Basically 547-550).
+
+<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61352745-b36cda80-a8a0-11e9-949d-f2f9ee193217.png">
+
+If an invalid username or email is entered, an error message will appear indicating a failure to generate the items for that specific Merchant.
+
+<img width="1432" alt="3" src="https://user-images.githubusercontent.com/6611854/61353068-71906400-a8a1-11e9-9d3f-2cc2f2115526.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -43,4 +60,4 @@ Enter the number of Categories and SubCategories you would like to generate for 
 
 To use the Transaction Generator, click on the Transactions tab at the top of the page. 
 
-Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you received the Success message, the numbers within the \[\] brackets indicate the Category number. If you take a look at the screenshot below, the 
+Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Category number. If you take a look at the screenshot below, the 2 Categories that were created would have the following usernames: Category194 and Category195.
