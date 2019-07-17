@@ -54,7 +54,7 @@ If an invalid username or email is entered, an error message will appear indicat
 
 <img width="1432" alt="3" src="https://user-images.githubusercontent.com/6611854/61353068-71906400-a8a1-11e9-9d3f-2cc2f2115526.png">
 
-If you would like to see the results of your Item Generator, go to the User page of your marketplace where you will be able to see the various listings created
+If you would like to see the results of your Item Generator, go to the User page of your marketplace where you will be able to see the various listings created.
 
 [4]
 
@@ -64,6 +64,10 @@ If you would like to see the results of your Item Generator, go to the User page
 
 To use the Transaction Generator, click on the Transactions tab at the top of the page. 
 
+<img width="1435" alt="1" src="https://user-images.githubusercontent.com/6611854/61353715-0e9fcc80-a8a3-11e9-86e6-e16fb47261ec.png">
 
+Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. You do not need to initialize anything before generating fake Transactions as all of the information is hard coded. In other words, your marketplace can be completely empty to generate Transactions. Once you receive the Success message, you will be given the username of the generated Buyer which is involved in all 10 transactions created.
 
-Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Category number. If you take a look at the screenshot below, the 2 Categories that were created would have the following usernames: Category194 and Category195.
+<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61353887-6d654600-a8a3-11e9-883d-e6d39db13b39.png">
+
+In order to view your generated Transactions, go to your marketplace's Payments & Transactions page.
