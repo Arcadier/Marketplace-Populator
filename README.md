@@ -66,9 +66,9 @@ To use the Transaction Generator, click on the Transactions tab at the top of th
 
 <img width="1435" alt="1" src="https://user-images.githubusercontent.com/6611854/61353715-0e9fcc80-a8a3-11e9-86e6-e16fb47261ec.png">
 
-Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. You do not need to initialize anything before generating fake Transactions as all of the information is hard coded. In other words, your marketplace can be completely empty to generate Transactions. Once you receive the Success message, you will be given the username of the generated Buyer which is involved in all 10 transactions created.
+To generate fake Transactions for your marketplace, no specific inputs are required. Simply click the blue "Generate Categories" button and the Transactions will be made. You do not need to initialize anything before generating fake Transactions as all of the information is hard coded. In other words, your marketplace can be completely empty to generate Transactions. Please note that in order to generate fake Transactions, some variables are automatically generated which are indicated in the screenshot below. Once you receive the Success message, you will be given the username of the generated Buyer which is involved in all 10 transactions created.
 
-<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61353887-6d654600-a8a3-11e9-883d-e6d39db13b39.png">
+<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61355553-46107800-a8a7-11e9-8307-9b6fc1a429e6.png">
 
 In order to view your generated Transactions, go to your marketplace's Payments & Transactions page.
 
