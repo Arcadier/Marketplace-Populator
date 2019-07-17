@@ -1,0 +1,196 @@
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<p>
+    Please note that the Multi-Purpose Generator may take some time to process if you decide to generate a large
+    number of objects. <br>
+</p>
+
+<hr style="border: 2px solid black;" />
+
+<div class="tab">
+    <button class="tablinks" onclick="openPage(event, 'Users')">
+        Users
+    </button>
+    <button class="tablinks" onclick="openPage(event, 'Categories')">
+        Categories
+    </button>
+    <button class="tablinks" onclick="openPage(event, 'Items')">
+        Items
+    </button>
+    <button class="tablinks" onclick="openPage(event, 'Transactions')">
+        Transactions
+    </button>
+</div>
+
+<div class="leftVerticalLine rightVerticalLine">
+    <div id="Users" class="tabcontent centered">
+        <br><br>
+        <h3>
+            Merchants and Buyers <br><br>
+        </h3>
+
+        <p>
+            Please indicate the number of Merchants and Buyers <br>
+            you would like to generate. <br><br>
+        </p>
+
+        <label for="merchants">
+            Number of Merchants (0-100):
+        </label>
+
+        <input type="number" value="0" id="merchants" name="merchants" min="0" max="100"><br><br>
+
+        <label for="buyers">
+            Number of Buyers (0-100):
+        </label>
+
+        <input type="number" value="0" id="buyers" name="buyers" min="0" max="100">
+
+        <!-- 8 line breaks -->
+        <br><br><br><br><br><br><br><br>
+
+        <button id="generateUsers" onclick="generateUsers()">
+            Generate Users
+        </button>
+
+        <div id="userLoad" class="loader"></div>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+
+        <h3 id="userOutput">
+            <br><br>
+        </h3>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+    </div>
+
+    <div id="Categories" class="tabcontent centered">
+        <br><br>
+        <h3>
+            Categories <br><br>
+        </h3>
+
+        <p>
+            Please indicate the number of Categories you<br>
+            would like to generate. <br><br>
+        </p>
+
+        <label for="categories">
+            Number of Categories (1-20):
+        </label>
+
+        <input type="number" value="1" id="categories" name="categories" min="1" max="20"><br><br>
+
+        <label for="subCategories">
+            Number of Sub-Categories (0-5):
+        </label>
+
+        <input type="number" value="0" id="subCategories" name="subCategories" min="0" max="5">
+
+        <!-- 8 line breaks -->
+        <br><br><br><br><br><br><br><br>
+
+        <button id="generateCategories" onclick="generateCategories()">
+            Generate Categories
+        </button>
+
+        <div id="catLoad" class="loader"></div>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+
+        <h3 id="catOutput">
+            <br><br>
+        </h3>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+    </div>
+
+    <div id="Items" class="tabcontent centered">
+        <br><br>
+        <h3>
+            Items <br><br>
+        </h3>
+
+        <p>
+            Please indicate the number of Items you would<br>
+            like to generate and under which Merchant user. <br><br>
+        </p>
+
+        <label for="items">
+            Number of Items (1-10):
+        </label>
+
+        <input type="number" value="1" id="items" name="items" min="1" max="10"><br><br>
+
+        <label for="user">
+            Username/Email of the Merchant:
+        </label>
+
+        <input type="text" value="username" id="username" name="username">
+
+        <!-- 8 line breaks -->
+        <br><br><br><br><br><br><br><br>
+
+        <button id="generateItems" onclick="generateItems()">
+            Generate Items
+        </button>
+
+        <div id="itemLoad" class="loader"></div>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+
+        <h3 id="itemOutput">
+            <br><br>
+        </h3>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+    </div>
+
+    <div id="Transactions" class="tabcontent centered">
+        <br><br>
+        <h3>
+            Transactions <br><br>
+        </h3>
+
+        <p>
+            Please note that by generating these fake transactions,<br>
+            your marketplace will automatically be populated with<br>
+            the following details:<br><br>
+            One Category<br>
+            Merchant with 10 items (5 with variance and 5 without)<br>
+            Merchant with 2 items (1 with variance and 1 without)<br>
+            Merchant with 2 items (1 with variance and 1 without)<br>
+            Buyer with no Payment Method<br><br>
+            The vast combination of these three Merchants will generate<br>
+            four transactions, which can be viewed under the<br>
+            Payments & Transactions tab to your left. <br><br>
+        </p>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+
+        <button id="generateTransactions" onclick="generateTransactions()">
+            Generate Transactions
+        </button>
+
+        <div id="transactionLoad" class="loader"></div>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+
+        <h3 id="transactionOutput">
+            <br><br>
+        </h3>
+
+        <!-- 4 line breaks -->
+        <br><br><br><br>
+    </div>
+</div>
+
+<script src="scripts/scripts.js"></script>
