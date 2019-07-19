@@ -73,3 +73,17 @@ To generate fake Transactions for your marketplace, no specific inputs are requi
 In order to view your generated Transactions, go to your marketplace's Payments & Transactions page.
 
 <img width="1419" alt="3" src="https://user-images.githubusercontent.com/6611854/61355089-2dec2900-a8a6-11e9-9861-d6324696feb9.png">
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+## Uploading Users
+
+To upload defined Users onto your marketplace, click on the Upload Users tab at the top of the page.
+
+[1]
+
+This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the User Template csv file and follow the instructions and parameters carefully.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+## Uploading Items
