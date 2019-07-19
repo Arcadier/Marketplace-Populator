@@ -86,7 +86,8 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
  * (R) indicates that the input for that section is Required
  * (M) indicates that the input for that section is only for Merchants
  * If any part of your input contains commas(","), put quotation marks around the entire input
-   * lol
+   * Example: "This is my description, that contains, a lot, of commas,,,"
+ * Users created will have initializing passwords identical to their respective Username/Email
 
 -----------------------------------------------------------------------------------------------------------------------------
 
