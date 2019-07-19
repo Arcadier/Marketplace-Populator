@@ -82,8 +82,16 @@ To upload defined Users onto your marketplace, click on the Upload Users tab at 
 
 [1]
 
-This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the User Template csv file and follow the instructions and parameters carefully.
+This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the User Template csv file and follow the instructions and parameters carefully. Take note of the following rules/warnings to prevent errors of any sort:
+ * lol
+ * lol
 
 -----------------------------------------------------------------------------------------------------------------------------
 
 ## Uploading Items
+
+To upload defined Items onto your marketplace, click on the Upload Items tab at the top of the page.
+
+[1]
+
+This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the Item Template csv file and follow the instructions and parameters carefully.
