@@ -83,8 +83,10 @@ To upload defined Users onto your marketplace, click on the Upload Users tab at 
 [1]
 
 This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the User Template csv file and follow the instructions and parameters carefully. Take note of the following rules/warnings to prevent errors of any sort:
- * lol
- * lol
+ * (R) indicates that the input for that section is Required
+ * (M) indicates that the input for that section is only for Merchants
+ * If any part of your input contains commas(","), put quotation marks around the entire input
+  * lol
 
 -----------------------------------------------------------------------------------------------------------------------------
 
