@@ -94,11 +94,11 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
  After uploading the file, click on Upload Users to complete the generation. Please take note of the following errors that may result in a miscreation or an incorrect update:
   * The Username/Email already exists
   * Invalid Phone Number
-      * Will NOT create User
+      * Will **NOT** create User
   * Invalid Postal Code
-      * Will NOT create User
+      * Will **NOT** create User
   * Invalid Country Code
-      * Will NOT create User
+      * Will **NOT** create User
   * Invalid Delivery Method
     * Will create User but not Shipping Method
   * Invalid Currency Code
@@ -132,4 +132,4 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
   * Invalid Stock Quantity
   * Invalid Currency Code
   * Invalid Categories
-    * Item will still be created as long as there is **One** valid Category
+    * Item will still be created as long as there is **ONE** valid Category
