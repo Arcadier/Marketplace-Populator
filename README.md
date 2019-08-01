@@ -88,6 +88,25 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
  * If any part of your input contains commas(","), put quotation marks around the entire input
    * Example: "This is my description, that contains, a lot, of commas,,,"
  * Users created will have initializing passwords identical to their respective Username/Email
+ 
+ [2 - input]
+ 
+ After uploading the file, click on Upload Users to complete the generation. Please take note of the following errors that may result in a miscreation or an incorrect update:
+  * The Username/Email already exists
+  * Invalid Phone Number
+      * Will NOT create User
+  * Invalid Postal Code
+      * Will NOT create User
+  * Invalid Country Code
+      * Will NOT create User
+  * Invalid Delivery Method
+    * Will create User but not Shipping Method
+  * Invalid Currency Code
+    * Will create User but not Shipping Method
+  * Invalid Price
+    * Will create User but not Shipping Method
+  * Invalid Combined Price
+    * Will create User but not Shipping Method
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -97,4 +116,20 @@ To upload defined Items onto your marketplace, click on the Upload Items tab at 
 
 [1]
 
-This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the Item Template csv file and follow the instructions and parameters carefully.
+This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the Item Template csv file and follow the instructions and parameters carefully. Take note of the following rules/warnings to prevent errors of any sort:
+ * (R) indicates that the input for that section is Required
+ * If any part of your input contains commas(","), put quotation marks around the entire input
+   * Example: "This is my description, that contains, a lot, of commas,,,"
+   * Please do this for multiple Categories and/or multiple Tags
+ 
+  [2 - input]
+ 
+ After uploading the file, click on Upload Users to complete the generation. Please take note of the following errors that will result in an error, causing that specific item to not be created:
+  * The User does not exist on your marketplace
+  * The User is not a Merchant
+  * Invalid Price
+  * Stock Quantity not specified for Limited Stock
+  * Invalid Stock Quantity
+  * Invalid Currency Code
+  * Invalid Categories
+    * Item will still be created as long as there is **One** valid Category
