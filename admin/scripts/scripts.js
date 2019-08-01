@@ -1,8 +1,3 @@
-$(document).ready(function () {
-    var myDiv = document.getElementById("Users")
-    myDiv.style.display = "block";
-});
-
 function getCookie(name) {
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
@@ -11,6 +6,37 @@ function getCookie(name) {
             .pop()
             .split(";")
             .shift();
+    }
+}
+
+// File variables
+var reader,
+    csv,
+    lines,
+    doc,
+    input;
+
+// Functions to read csv file
+function getAsText(fileToRead) {
+    reader = new FileReader();
+    reader.readAsText(fileToRead);
+    reader.onload = loadHandler;
+    reader.onerror = errorHandler;
+}
+
+function loadHandler(event) {
+    csv = event.target.result;
+    processData(csv);
+}
+
+function processData(csv) {
+    lines = Papa.parse(csv)['data'];
+    console.log(lines);
+}
+
+function errorHandler(evt) {
+    if (evt.target.error.name == "NotReadableError") {
+        alert("Canno't read file !");
     }
 }
 
@@ -59,6 +85,421 @@ var lastNames = [
     "Chang",
     "Lewis"
 ];
+var alpha2 = ['AF',
+    'AX',
+    'AL',
+    'DZ',
+    'AS',
+    'AD',
+    'AO',
+    'AI',
+    'AQ',
+    'AG',
+    'AR',
+    'AM',
+    'AW',
+    'AU',
+    'AT',
+    'AZ',
+    'BS',
+    'BH',
+    'BD',
+    'BB',
+    'BY',
+    'BE',
+    'BZ',
+    'BJ',
+    'BM',
+    'BT',
+    'BO',
+    'BA',
+    'BW',
+    'BV',
+    'BR',
+    'IO',
+    'BN',
+    'BG',
+    'BF',
+    'BI',
+    'KH',
+    'CM',
+    'CA',
+    'CV',
+    'KY',
+    'CF',
+    'TD',
+    'CL',
+    'CN',
+    'CX',
+    'CC',
+    'CO',
+    'KM',
+    'CG',
+    'CD',
+    'CK',
+    'CR',
+    'CI',
+    'HR',
+    'CU',
+    'CY',
+    'CZ',
+    'DK',
+    'DJ',
+    'DM',
+    'DO',
+    'EC',
+    'EG',
+    'SV',
+    'GQ',
+    'ER',
+    'EE',
+    'ET',
+    'FK',
+    'FO',
+    'FJ',
+    'FI',
+    'FR',
+    'GF',
+    'PF',
+    'TF',
+    'GA',
+    'GM',
+    'GE',
+    'DE',
+    'GH',
+    'GI',
+    'GR',
+    'GL',
+    'GD',
+    'GP',
+    'GU',
+    'GT',
+    'GG',
+    'GN',
+    'GW',
+    'GY',
+    'HT',
+    'HM',
+    'VA',
+    'HN',
+    'HK',
+    'HU',
+    'IS',
+    'IN',
+    'ID',
+    'IR',
+    'IQ',
+    'IE',
+    'IM',
+    'IL',
+    'IT',
+    'JM',
+    'JP',
+    'JE',
+    'JO',
+    'KZ',
+    'KE',
+    'KI',
+    'KR',
+    'KW',
+    'KG',
+    'LA',
+    'LV',
+    'LB',
+    'LS',
+    'LR',
+    'LY',
+    'LI',
+    'LT',
+    'LU',
+    'MO',
+    'MK',
+    'MG',
+    'MW',
+    'MY',
+    'MV',
+    'ML',
+    'MT',
+    'MH',
+    'MQ',
+    'MR',
+    'MU',
+    'YT',
+    'MX',
+    'FM',
+    'MD',
+    'MC',
+    'MN',
+    'ME',
+    'MS',
+    'MA',
+    'MZ',
+    'MM',
+    'NA',
+    'NR',
+    'NP',
+    'NL',
+    'AN',
+    'NC',
+    'NZ',
+    'NI',
+    'NE',
+    'NG',
+    'NU',
+    'NF',
+    'MP',
+    'NO',
+    'OM',
+    'PK',
+    'PW',
+    'PS',
+    'PA',
+    'PG',
+    'PY',
+    'PE',
+    'PH',
+    'PN',
+    'PL',
+    'PT',
+    'PR',
+    'QA',
+    'RE',
+    'RO',
+    'RU',
+    'RW',
+    'BL',
+    'SH',
+    'KN',
+    'LC',
+    'MF',
+    'PM',
+    'VC',
+    'WS',
+    'SM',
+    'ST',
+    'SA',
+    'SN',
+    'RS',
+    'SC',
+    'SL',
+    'SG',
+    'SK',
+    'SI',
+    'SB',
+    'SO',
+    'ZA',
+    'GS',
+    'ES',
+    'LK',
+    'SD',
+    'SR',
+    'SJ',
+    'SZ',
+    'SE',
+    'CH',
+    'SY',
+    'TW',
+    'TJ',
+    'TZ',
+    'TH',
+    'TL',
+    'TG',
+    'TK',
+    'TO',
+    'TT',
+    'TN',
+    'TR',
+    'TM',
+    'TC',
+    'TV',
+    'UG',
+    'UA',
+    'AE',
+    'GB',
+    'US',
+    'UM',
+    'UY',
+    'UZ',
+    'VU',
+    'VE',
+    'VN',
+    'VG',
+    'VI',
+    'WF',
+    'EH',
+    'YE',
+    'ZM',
+    'ZW'
+]
+var alpha3 = ['AFN',
+    'ALL',
+    'DZD',
+    'USD',
+    'AOA',
+    'XCD',
+    'ARS',
+    'AMD',
+    'AWG',
+    'AUD',
+    'AZN',
+    'BSD',
+    'BHD',
+    'BDT',
+    'BBD',
+    'BYN',
+    'BZD',
+    'BMD',
+    'BTN',
+    'INR',
+    'BOB',
+    'BOV',
+    'BAM',
+    'BWP',
+    'NOK',
+    'BRL',
+    'BND',
+    'BGN',
+    'BIF',
+    'CVE',
+    'KHR',
+    'XAF',
+    'CAD',
+    'KYD',
+    'CLF',
+    'CLP',
+    'CNY',
+    'COP',
+    'COU',
+    'KMF',
+    'CDF',
+    'NZD',
+    'CRC',
+    'HRK',
+    'CUC',
+    'CUP',
+    'ANG',
+    'CZK',
+    'DKK',
+    'DJF',
+    'DOP',
+    'EGP',
+    'SVC',
+    'ERN',
+    'ETB',
+    'FKP',
+    'FJD',
+    'XPF',
+    'GMD',
+    'GEL',
+    'GHS',
+    'GIP',
+    'GTQ',
+    'GBP',
+    'GNF',
+    'GYD',
+    'HTG',
+    'HNL',
+    'HKD',
+    'HUF',
+    'ISK',
+    'IDR',
+    'XDR',
+    'IRR',
+    'IQD',
+    'ILS',
+    'JMD',
+    'JPY',
+    'JOD',
+    'KZT',
+    'KES',
+    'KPW',
+    'KRW',
+    'KWD',
+    'KGS',
+    'LAK',
+    'LBP',
+    'LSL',
+    'LRD',
+    'LYD',
+    'CHF',
+    'MOP',
+    'MGA',
+    'MWK',
+    'MYR',
+    'MVR',
+    'MRU',
+    'MUR',
+    'XUA',
+    'MXN',
+    'MXV',
+    'MDL',
+    'MNT',
+    'MAD',
+    'MZN',
+    'MMK',
+    'NAD',
+    'NPR',
+    'NIO',
+    'NGN',
+    'OMR',
+    'PKR',
+    'PAB',
+    'PGK',
+    'PYG',
+    'PEN',
+    'PHP',
+    'PLN',
+    'QAR',
+    'MKD',
+    'RON',
+    'RUB',
+    'RWF',
+    'SHP',
+    'WST',
+    'STN',
+    'SAR',
+    'XOF',
+    'RSD',
+    'SCR',
+    'SLL',
+    'SGD',
+    'XSU',
+    'SBD',
+    'SOS',
+    'ZAR',
+    'SSP',
+    'LKR',
+    'SDG',
+    'SRD',
+    'SZL',
+    'SEK',
+    'CHE',
+    'CHW',
+    'SYP',
+    'TWD',
+    'TJS',
+    'TZS',
+    'THB',
+    'TOP',
+    'TTD',
+    'TND',
+    'TRY',
+    'TMT',
+    'UGX',
+    'UAH',
+    'AED',
+    'USN',
+    'UYI',
+    'UYU',
+    'UZS',
+    'VUV',
+    'VEF',
+    'VND',
+    'YER',
+    'ZMW',
+    'ZWL',
+    'EUR'
+]
 // var manImage = "https://bootstrap.arcadier.com/github/Screen%20Shot%202019-07-15%20at%2011.11.23%20AM.png";
 // var womanImage = "https://bootstrap.arcadier.com/github/Screen%20Shot%202019-07-15%20at%2011.11.34%20AM.png";
 var token = getCookie("webapitoken");
@@ -105,22 +546,12 @@ var info,
     firstCategory = 0,
     secondCategory = 0,
     firstItem = 0,
-    secondItem = 0;
-
-// Tab function
-function openPage(event, pageName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(pageName).style.display = "block";
-    event.currentTarget.className += " active";
-}
+    secondItem = 0,
+    error = 0,
+    outputMessage = "",
+    roles,
+    isMerchant,
+    exitCode;
 
 // Front End functions
 function makeLoadingVisible() {
@@ -183,7 +614,6 @@ function createUsers() {
         secondBuyer = currentUsers;
         makeBuyer();
     }
-    makeLoadingHidden();
     userOutput();
 }
 
@@ -440,11 +870,12 @@ function createBuyerAddress() {
     $.ajax(settings);
 }
 
-// Output User Result
+// User Output Result
 function userOutput() {
+    makeLoadingHidden();
     makeButtonVisible();
     document.getElementById("userOutput").innerHTML = "You have Successfully generated<br>" +
-        numMerchants + " Merchant(s)[" + firstMerchant + "-" + secondMerchant + "] and " +
+        numMerchants + " Merchant(s)[" + firstMerchant + "-" + secondMerchant + "] and<br>" +
         numBuyers + " Buyer(s)[" + firstBuyer + "-" + secondBuyer + "]!";
 }
 
@@ -489,7 +920,6 @@ function createCategories() {
             makeSubCategory(j);
         }
     }
-    makeLoadingHidden();
     catOutput();
 }
 
@@ -548,16 +978,17 @@ function makeSubCategory(index) {
     $.ajax(settings);
 }
 
-// Output Category Result
+// Category Output Result
 function catOutput() {
+    makeLoadingHidden();
     makeButtonVisible();
     if (numSubCategories > 0) {
         document.getElementById("catOutput").innerHTML = "You have Successfully generated<br>" +
-            numCategories + " Category(ies)[" + firstCategory + "-" + secondCategory + "] with " +
+            numCategories + " Category(ies)[" + firstCategory + "-" + secondCategory + "] with<br>" +
             numSubCategories + " SubCategory(ies)[" + String.fromCharCode(65) + "-" + String.fromCharCode(Number(numSubCategories) + 64) + "] each!";
     } else {
         document.getElementById("catOutput").innerHTML = "You have Successfully generated<br>" +
-            numCategories + " Category(ies)[" + firstCategory + "-" + secondCategory + "] with " +
+            numCategories + " Category(ies)[" + firstCategory + "-" + secondCategory + "] with<br>" +
             numSubCategories + " SubCategory(ies)[0-0] each!";
     }
 }
@@ -595,10 +1026,8 @@ function createItems() {
             secondItem = currentItems;
             makeItem();
         }
-        makeLoadingHidden();
         itemOutput();
     } else {
-        makeLoadingHidden();
         itemFailOutput();
     }
 }
@@ -663,14 +1092,13 @@ function updateItemCategories() {
     if (currentCategories) {
         randNumber = ((randomNumber(currentCategories)) % 25) / 5 + 1;
         for (var i = 0; i < randNumber; i++) {
-            getCategoryId();
-            category = { ID: categoryId };
+            getRandomCategoryId();
             data.Categories[i] = category;
         }
     }
 }
 
-function getCategoryId() {
+function getRandomCategoryId() {
     settings = {
         url:
             "https://" +
@@ -685,6 +1113,7 @@ function getCategoryId() {
     $.ajax(settings).done(function (response) {
         records = response.Records;
         categoryId = records[randomNumber(currentCategories)].ID;
+        category = { ID: categoryId };
     });
 }
 
@@ -693,8 +1122,7 @@ function updateItemShippingMethods() {
     if (currentShippingMethods) {
         randNumber = randomNumber(currentShippingMethods) + 1;
         for (var i = 0; i < randNumber; i++) {
-            getShippingMethodId();
-            shippingMethod = { ID: shippingMethodId };
+            getRandomShippingMethodId();
             data.ShippingMethods[i] = shippingMethod;
         }
     }
@@ -716,7 +1144,7 @@ function getNumberShippingMethods() {
     });
 }
 
-function getShippingMethodId() {
+function getRandomShippingMethodId() {
     settings = {
         url:
             "https://" + baseURL + "/api/v2/merchants/" + userId + "/shipping-methods",
@@ -728,6 +1156,7 @@ function getShippingMethodId() {
     };
     $.ajax(settings).done(function (response) {
         shippingMethodId = response[randomNumber(currentShippingMethods)].ID;
+        shippingMethod = { ID: shippingMethodId };
     });
 }
 
@@ -736,8 +1165,7 @@ function updateItemPickupAddresses() {
     if (currentPickupAddresses) {
         randNumber = randomNumber(currentPickupAddresses) + 1;
         for (var i = 0; i < randNumber; i++) {
-            getPickupAddressId();
-            pickupAddress = { ID: pickupAddressId };
+            getRandomPickupAddressId();
             data.PickupAddresses[i] = pickupAddress;
         }
     }
@@ -759,7 +1187,7 @@ function getNumberPickupAddresses() {
     });
 }
 
-function getPickupAddressId() {
+function getRandomPickupAddressId() {
     settings = {
         url:
             "https://" + baseURL + "/api/v2/users/" + userId + "/addresses",
@@ -772,6 +1200,7 @@ function getPickupAddressId() {
     $.ajax(settings).done(function (response) {
         records = response.Records;
         pickupAddressId = records[randomNumber(currentPickupAddresses)].ID;
+        pickupAddress = { ID: pickupAddressId };
     });
 }
 
@@ -824,16 +1253,18 @@ function updateItemStock() {
     }
 }
 
-// Output Item Result
+// Item Output Result
 function itemOutput() {
+    makeLoadingHidden();
     makeButtonVisible();
     document.getElementById("itemOutput").innerHTML = "You have Successfully generated<br>" +
         numItems + " Item(s)[" + firstItem + "-" + secondItem + "] for " +
         username + "!";
 }
 
-// Output Item Result Fail
+// Item Output Result Fail
 function itemFailOutput() {
+    makeLoadingHidden();
     makeButtonVisible();
     document.getElementById("itemOutput").innerHTML = username + " does not exist on your marketplace.<br>" +
         "Failed to generate " + numItems + " Item(s) for " + username + ".";
@@ -867,7 +1298,6 @@ function createTransactions() {
     makeCategory();
     makeItems();
     doCheckouts();
-    makeLoadingHidden();
     transactionOutput();
 }
 
@@ -879,7 +1309,7 @@ function makeUsers() {
     }
     makeBuyer();
     getNumberPickupAddresses();
-    getPickupAddressId();
+    getRandomPickupAddressId();
     username = info;
     buyerId = userId;
 }
@@ -1186,7 +1616,7 @@ function updatePaymentDetails(index) {
             DateTimeSubmittedForApproval: 0,
             DateTimeRefunded: 0
         };
-        invoices.push(data);
+        invoices[i] = data;
     }
     settings = {
         url: "https://" + baseURL + "/api/v2/admins/" + adminId + "/invoices/" + invoiceNo,
@@ -1201,8 +1631,420 @@ function updatePaymentDetails(index) {
     $.ajax(settings);
 }
 
+// Transaction Output Result
 function transactionOutput() {
+    makeLoadingHidden();
     makeButtonVisible();
     document.getElementById("transactionOutput").innerHTML = "You have Successfully generated<br>" +
         "10 Transactions for " + username + "!";
+}
+
+// Main and Supporting functions for Mass User Upload
+function downloadUserTemplate() {
+    csv = "Username/Email(R)," +
+        "First Name(R)," +
+        "Last Name(R)," +
+        "Display Name(R)," +
+        "Description," +
+        "Date of Birth," +
+        "Phone Number(R)," +
+        "Time Zone," +
+        "User Role(R)," +
+        "Address Line1(R)," +
+        "Address Line2," +
+        "Postal Code(R)," +
+        "Delivery?(R)," +
+        "Pickup?(R)," +
+        "State," +
+        "City(R)," +
+        "Country(R)," +
+        "Country Code(R)," +
+        "Shipping Method Courier(M)," +
+        "Method(M)," +
+        "Price(M)," +
+        "Combined Price(M)," +
+        "Currency Code(M)," +
+        "Shipping Method Description(M)\n";
+    csv = csv + "String," +
+        "String," +
+        "String," +
+        "String," +
+        "String," +
+        "DD/MM/YYYY," +
+        "Number," +
+        "GMT+(No.)," +
+        "Merchant/Buyer," +
+        "String," +
+        "String," +
+        "String," +
+        "Yes/No," +
+        "Yes/No," +
+        "String," +
+        "String," +
+        "String," +
+        "String," +
+        "String," +
+        "Delivery/Pickup," +
+        "Number," +
+        "Number," +
+        "String," +
+        "String";
+    doc = document.createElement("a");
+    doc.href = "data:text/csv;charset=utf-8," + encodeURI(csv);
+    doc.target = "_blank";
+    doc.download = "UserTemplate.csv";
+    doc.click();
+}
+
+function uploadUsers(files) {
+    if (window.FileReader) {
+        getAsText(files[0]);
+    } else {
+        alert('FileReader are not supported in this browser.');
+    }
+    button = document.getElementById("uploadUsers");
+    makeButtonHidden();
+    loading = document.getElementById("userUploadLoad");
+    makeLoadingVisible();
+    adminId = document.getElementById("userGuid").value;
+    setTimeout(inputUsers, 100);
+}
+
+function inputUsers() {
+    for (var i = 2; i < lines.length; i++) {
+        if (lines[i][0]) {
+            makeUser(i);
+        }
+    }
+    userUploadOutput();
+}
+
+function makeUser(index) {
+    if (isNaN(lines[index][6])) {
+        error = error + 1;
+        outputMessage = outputMessage + "Error: Phone Number is invalid for User " + lines[index][0] + ".<br>";
+    } else if (!(alpha2.includes(lines[index][17]))) {
+        error = error + 1;
+        outputMessage = outputMessage + "Error: Country Code is invalid for User " + lines[index][0] + ".<br>";
+    } else {
+        registerUser(index);
+        if (exitCode) {
+            exitCode = 0;
+            return;
+        }
+        getNumberUsers();
+        getUserId();
+        updateUserInfo(index);
+        updateUserAddress(index);
+    }
+}
+
+function registerUser(index) {
+    info = lines[index][0];
+    data = {
+        Email: info,
+        Password: info,
+        ConfirmPassword: info
+    };
+    settings = {
+        url: "https://" + baseURL + "/api/v2/accounts/register",
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token
+        },
+        data: JSON.stringify(data),
+        async: false,
+        error: function () {
+            exitCode = 1;
+            error = error + 1;
+            outputMessage = outputMessage + "Error: " + info + " already exists on your marketplace!<br>"
+        }
+    };
+    $.ajax(settings);
+}
+
+function updateUserInfo(index) {
+    data = {
+        FirstName: lines[index][1],
+        LastName: lines[index][2],
+        DisplayName: lines[index][3],
+        Description: lines[index][4],
+        DOB: lines[index][5],
+        PhoneNumber: lines[index][6],
+        TimeZone: lines[index][7]
+    };
+    settings = {
+        url: "https://" + baseURL + "/api/v2/users/" + userId,
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token
+        },
+        data: JSON.stringify(data),
+        async: false
+    };
+    $.ajax(settings);
+    if (lines[index][8].toLowerCase() === "merchant") {
+        updateMerchantRole();
+        if (!((lines[index][19].toLowerCase() === "delivery") || (lines[index][19].toLowerCase() === "pickup"))) {
+            outputMessage = outputMessage + "Error: Merchant " + lines[index][0] + " was Successfully created BUT<br>" +
+                "has an Invalid Delivery Method for Shipping Method.<br>";
+        } else if (!(alpha3.includes(lines[index][22]))) {
+            outputMessage = outputMessage + "Error: Merchant " + lines[index][0] + " was Successfully created BUT<br>" +
+                "has an Invalid Currency Code for Shipping Method.<br>";
+        } else {
+            updateUserShippingMethod(index);
+        }
+    }
+}
+
+function updateUserAddress(index) {
+    data = {
+        Name: lines[index][1] + " " + lines[index][2],
+        Line1: lines[index][9],
+        Line2: lines[index][10],
+        PostCode: lines[index][11],
+        Delivery: (lines[index][12] === "Yes"),
+        Pickup: (lines[index][13] === "Yes"),
+        State: lines[index][14],
+        City: lines[index][15],
+        Country: lines[index][16],
+        CountryCode: lines[index][17]
+    };
+    settings = {
+        url: "https://" + baseURL + "/api/v2/users/" + userId + "/addresses",
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token
+        },
+        data: JSON.stringify(data),
+        async: false
+    };
+    $.ajax(settings);
+}
+
+function updateUserShippingMethod(index) {
+    data = {
+        Courier: lines[index][18],
+        Method: lines[index][19].toLowerCase(),
+        Price: lines[index][20],
+        CombinedPrice: lines[index][21],
+        CurrencyCode: lines[index][22],
+        Description: lines[index][23]
+    }
+    settings = {
+        url:
+            "https://" + baseURL + "/api/v2/merchants/" + userId + "/shipping-methods",
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token
+        },
+        data: JSON.stringify(data),
+        async: false
+    };
+    $.ajax(settings);
+}
+
+// User Upload Output Result
+function userUploadOutput() {
+    makeLoadingHidden();
+    makeButtonVisible();
+    document.getElementById("userUploadOutput").innerHTML = outputMessage +
+        "You have Successfully generated " + (lines.length - 2 - error) + " Users!";
+    outputMessage = "";
+    error = 0;
+}
+
+// Item Upload Variables
+var categories = [],
+    categoryIds = [],
+    tags = [];
+
+// Main and Supporting functions for Mass Item Upload
+function downloadItemTemplate() {
+    csv = "Item Name(R)," +
+        "Merchant Username/Email(R)," +
+        "SKU," +
+        "Buyer Description(R)," +
+        "Seller Description(R)," +
+        "Price(R)," +
+        "Price Unit," +
+        "Stock Limited?(R)," +
+        "Stock Quantity," +
+        "Currency Code(R)," +
+        "Categories(R)," +
+        "Tags\n";
+    csv = csv + "String," +
+        "String," +
+        "String," +
+        "String," +
+        "String," +
+        "Number," +
+        "String," +
+        "Yes/No," +
+        "Number," +
+        "String," +
+        "String," +
+        "String";
+    doc = document.createElement("a");
+    doc.href = "data:text/csv;charset=utf-8," + encodeURI(csv);
+    doc.target = "_blank";
+    doc.download = "ItemTemplate.csv";
+    doc.click();
+}
+
+function uploadItems(files) {
+    if (window.FileReader) {
+        getAsText(files[0]);
+    } else {
+        alert('FileReader are not supported in this browser.');
+    }
+    button = document.getElementById("uploadItems");
+    makeButtonHidden();
+    loading = document.getElementById("itemUploadLoad");
+    makeLoadingVisible();
+    adminId = document.getElementById("userGuid").value;
+    setTimeout(inputItems, 100);
+}
+
+function inputItems() {
+    getNumberUsers();
+    for (var i = 2; i < lines.length; i++) {
+        if (lines[i][0]) {
+            info = lines[i][1];
+            getUserId();
+            if (userId != "") {
+                checkMerchant();
+                if (!isMerchant) {
+                    error = error + 1;
+                    outputMessage = outputMessage + "Error: " + info + " is not a Merchant on your marketplace.<br>";
+                } else {
+                    categories = lines[i][10].split(",");
+                    tags = lines[i][11].split(",");
+                    if (!(Number(lines[i][5]))) {
+                        error = error + 1;
+                        outputMessage = outputMessage + "Error: Invalid Price (" + lines[i][0] + ").<br>";
+                    } else if ((lines[i][7] === "Yes") && !(Number(lines[i][8]))) {
+                        error = error + 1;
+                        outputMessage = outputMessage + "Error: Stock Quantity not specified for limited Stock (" + lines[i][0] + ").<br>";
+                    } else if ((lines[i][7] === "Yes") && (Number(lines[i][8]) < 0)) {
+                        error = error + 1;
+                        outputMessage = outputMessage + "Error: Invalid Stock Quantity for limited Stock (" + lines[i][0] + ").<br>";
+                    } else if (!(alpha3.includes(lines[i][9]))) {
+                        error = error + 1;
+                        outputMessage = outputMessage + "Error: Invalid Currency Code (" + lines[i][0] + ").<br>"
+                    } else {
+                        getNumberCategories();
+                        getCategoryIds();
+                        if (!categoryIds.length) {
+                            error = error + 1;
+                            outputMessage = outputMessage + "Error: Categories not recognized (" + lines[i][0] + ").<br>";
+                        } else {
+                            makeCustomItem(i);
+                        }
+                    }
+                }
+            } else {
+                error = error + 1;
+                outputMessage = outputMessage + "Error: " + info + " is not a registered User on your marketplace.<br>";
+            }
+        }
+    }
+    itemUploadOutput();
+}
+
+function checkMerchant() {
+    settings = {
+        url:
+            "https://" + baseURL + "/api/v2/users/" + userId,
+        method: "GET",
+        async: false
+    };
+    $.ajax(settings).done(function (response) {
+        roles = response.Roles;
+        for (var i = 0; i < roles.length; i++) {
+            if (roles[i] === "Merchant") {
+                isMerchant = true;
+                return;
+            }
+        }
+        isMerchant = false;
+    })
+}
+
+function getCategoryIds() {
+    settings = {
+        url:
+            "https://" +
+            baseURL +
+            "/api/v2/admins/" +
+            adminId +
+            "/categories?PageSize=" +
+            currentCategories,
+        method: "GET",
+        async: false
+    };
+    $.ajax(settings).done(function (response) {
+        categoryIds = [];
+        for (var i = 0; i < categories.length; i++) {
+            records = response.Records;
+            records.forEach(function (element) {
+                if (element.Name === categories[i]) {
+                    category = { ID: element.ID };
+                    categoryIds.push(category);
+                }
+            });
+        }
+    });
+}
+
+function makeCustomItem(index) {
+    data = {
+        SKU: lines[index][2],
+        Name: lines[index][0],
+        BuyerDescription: lines[index][3],
+        SellerDescription: lines[index][4],
+        Price: lines[index][5],
+        PriceUnit: lines[index][6],
+        StockLimited: (lines[index][7] === "Yes"),
+        StockQuantity: lines[index][8],
+        IsVisibleToCustomer: true,
+        Active: true,
+        IsAvailable: true,
+        CurrencyCode: lines[index][9],
+        Categories: categoryIds,
+        Media: [
+            {
+                MediaUrl: "https://dogaccessories.sandbox.arcadier.io/images/c27f4fc8-305b-4c5d-b209-635b2048d1ab-3x852dzo70Item19170-636439922842419797-C7k6Mg.jpg"
+            }
+        ],
+        ShippingMethods: [],
+        PickupAddresses: [],
+        Tags: tags,
+    };
+    updateItemShippingMethods();
+    updateItemPickupAddresses();
+    settings = {
+        url: "https://" + baseURL + "/api/v2/merchants/" + userId + "/items",
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token
+        },
+        data: JSON.stringify(data),
+        async: false
+    };
+    $.ajax(settings);
+}
+
+// Item Upload Output Result
+function itemUploadOutput() {
+    makeLoadingHidden();
+    makeButtonVisible();
+    document.getElementById("itemUploadOutput").innerHTML = outputMessage + "You have Successfully generated " + (lines.length - 2 - error) + " Items!";
+    outputMessage = "";
+    error = 0;
 }

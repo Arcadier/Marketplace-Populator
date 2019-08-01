@@ -1,196 +1,1218 @@
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 
-<p>
-    Please note that the Multi-Purpose Generator may take some time to process if you decide to generate a large
-    number of objects. <br>
-</p>
+<head>
+    <meta https-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace Populator</title>
+    <!-- core js -->
+    <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/jquery.js"></script>
+    <!-- bootstrap js -->
+    <!-- <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/bootstrap.min.js"></script> -->
+    <!-- nicescroll js -->
+    <script type="text/javascript"
+        src="https://bootstrap.arcadier.com/adminportal/js/jquery.nicescroll.min.js"></script>
+    <!-- Moment js -->
+    <!-- <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/moment.min.js"></script> -->
+    <!-- bootbox js -->
+    <!-- <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/bootbox.min.js"></script> -->
+    <!-- tablesorter js -->
+    <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/jquery.tablesorter.js"></script>
+    <!-- html5upload js -->
+    <!-- <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/html5imageupload.min.js"></script> -->
+    <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/sol.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://bootstrap.arcadier.com/adminportal/js/custom.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <!-- bootstrap style -->
 
-<hr style="border: 2px solid black;" />
+    <link href="https://bootstrap.arcadier.com/adminportal/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://bootstrap.arcadier.com/adminportal/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="https://bootstrap.arcadier.com/adminportal/css/html5imageupload.css" rel="stylesheet" type="text/css">
+    <link href="https://bootstrap.arcadier.com/adminportal/css/switch-btn.css" rel="stylesheet" type="text/css">
+    <!-- fancy-radio style -->
+    <link href="https://bootstrap.arcadier.com/adminportal/css/fancy-radio.css" rel="stylesheet" type="text/css" />
+    <!-- custom style-->
+    <link href="https://bootstrap.arcadier.com/adminportal/css/sol.css" rel="stylesheet" type="text/css">
+    <link href="https://bootstrap.arcadier.com/adminportal/css/style.css" rel="stylesheet" type="text/css">
 
-<div class="tab">
-    <button class="tablinks" onclick="openPage(event, 'Users')">
-        Users
-    </button>
-    <button class="tablinks" onclick="openPage(event, 'Categories')">
-        Categories
-    </button>
-    <button class="tablinks" onclick="openPage(event, 'Items')">
-        Items
-    </button>
-    <button class="tablinks" onclick="openPage(event, 'Transactions')">
-        Transactions
-    </button>
-</div>
+    <link href="https://bootstrap.arcadier.com/adminportal/css/sidemenu.css" rel="stylesheet" type="text/css"
+        media="screen,print">
+    <!-- responsive style-->
+    <link href="https://bootstrap.arcadier.com/adminportal/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="css/adminstyle.css" rel="stylesheet" type="text/css">
+    <link href="css/marketplace-populator.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .consumer-box {
+            padding-top: 20px;
+            border-top: 1px solid #d9d9d9;
+            margin-top: 15px;
+        }
+    </style>
+</head>
 
-<div class="leftVerticalLine rightVerticalLine">
-    <div id="Users" class="tabcontent centered">
-        <br><br>
-        <h3>
-            Merchants and Buyers <br><br>
-        </h3>
+<div class="page-merchant page-marketplace-populator">
+    <div class="mobi-header visible-xs">
+        <div class="container">
+            <div class="pull-left">
+                <div class="brand-logo"><a href="#"><img alt="logo"
+                            src="https://bootstrap.arcadier.com/adminportal/images/brand-logo.png"></a></div>
+            </div>
+            <div class="pull-right">
+                <button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="main">
 
-        <p>
-            Please indicate the number of Merchants and Buyers <br>
-            you would like to generate. <br><br>
-        </p>
+        <div class="col-sm-9 main-content">
+            <div class="page-content page-layout">
+                <div class="gutter-wrapper">
+                    <div class="panel-box ">
+                        <div class="page-content-top populator-note">
+                            <div><i class="icon icon-3x populator-icon-big"></i></div>
+                            <div>
+                                <p>Please note that this Plug-In may take some time to process if you decide to generate
+                                    a large number of objects. </p>
+                            </div>
 
-        <label for="merchants">
-            Number of Merchants (0-100):
-        </label>
+                        </div>
 
-        <input type="number" value="0" id="merchants" name="merchants" min="0" max="100"><br><br>
 
-        <label for="buyers">
-            Number of Buyers (0-100):
-        </label>
+                        <div class="clearfix"></div>
+                    </div>
 
-        <input type="number" value="0" id="buyers" name="buyers" min="0" max="100">
+                    <div class="panel-box ">
+                        <div class="page-content">
 
-        <!-- 8 line breaks -->
-        <br><br><br><br><br><br><br><br>
 
-        <button id="generateUsers" onclick="generateUsers()">
-            Generate Users
-        </button>
 
-        <div id="userLoad" class="loader"></div>
+                            <div id="allFrontEnd">
 
-        <!-- 4 line breaks -->
-        <br><br><br><br>
+                                <div class="panel-box-tab clearfix">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="#Users" aria-controls="users" role="tab"
+                                                data-toggle="tab">Users</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Categories" aria-controls="categories" role="tab"
+                                                data-toggle="tab">Categories</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Items" aria-controls="items" role="tab"
+                                                data-toggle="tab">Items</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Transactions" aria-controls="transactions" role="tab"
+                                                data-toggle="tab">Transactions</a>
+                                        </li>
+                                        <li>
+                                            <a href="#UserUpload" aria-controls="userUpload" role="tab"
+                                                data-toggle="tab">User Upload</a>
+                                        </li>
+                                        <li>
+                                            <a href="#ItemUpload" aria-controls="itemUpload" role="tab"
+                                                data-toggle="tab">Item Upload</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-        <h3 id="userOutput">
-            <br><br>
-        </h3>
+                                <div class="leftVerticalLine rightVerticalLine">
+                                    <!-- <div id="Users" class="tabcontent" style="display: block;"> -->
+                                    <div id="Users" role="tabpanel" class="tabcontent tab-pane fade in active">
+                                        <h3>
+                                            Merchants and Buyers
+                                        </h3>
 
-        <!-- 4 line breaks -->
-        <br><br><br><br>
+                                        <p>
+                                            Please indicate the number of Merchants and Buyers you would like to
+                                            generate.
+                                        </p>
+
+                                        <label for="merchants">
+                                            Number of Merchants (0-100):
+                                        </label>
+
+                                        <input type="number" value="0" id="merchants" name="merchants" min="0"
+                                            max="100"><br><br><br>
+
+                                        <label for="buyers">
+                                            Number of Buyers (0-100):
+                                        </label>
+
+                                        <input type="number" value="0" id="buyers" name="buyers" min="0" max="100">
+
+                                        <br><br><br>
+
+
+                                        <button id="generateUsers" onclick="generateUsers()">
+                                            Generate
+                                        </button>
+
+                                        <br><br><br>
+
+                                        <div id="userLoad" class="loader"></div>
+
+                                        <br>
+
+
+                                        <h3 id="userOutput">
+                                            <br>
+                                            <br>
+                                        </h3>
+
+                                    </div>
+
+                                    <!-- <div id="Categories" class="tabcontent" style="display: none;"> -->
+                                    <div id="Categories" role="tabpanel" class="tabcontent tab-pane fade">
+
+                                        <h3>
+                                            Categories
+                                        </h3>
+
+                                        <p>
+                                            Please indicate the number of Categories you would like to generate.
+                                        </p>
+
+                                        <label for="categories">
+                                            Number of Categories (1-20):
+                                        </label>
+
+                                        <input type="number" value="1" id="categories" name="categories" min="1"
+                                            max="20"><br><br><br>
+
+                                        <label for="subCategories">
+                                            Number of Sub-Categories (0-5):
+                                        </label>
+
+                                        <input type="number" value="0" id="subCategories" name="subCategories" min="0"
+                                            max="5"><br><br><br>
+
+
+                                        <button id="generateCategories" onclick="generateCategories()">
+                                            Generate
+                                        </button>
+
+                                        <br><br><br>
+
+                                        <div id="catLoad" class="loader"></div>
+
+
+
+                                        <br>
+                                        <h3 id="catOutput">
+                                            <br>
+                                            <br>
+                                        </h3>
+
+
+
+                                    </div>
+
+                                    <div id="Items" role="tabpanel" class="tabcontent tab-pane fade">
+                                        <h3>
+                                            Items
+                                        </h3>
+
+                                        <p>
+                                            Please indicate the number of Items you would like to generate and under
+                                            which Merchant user.
+                                        </p>
+
+                                        <label for="items">
+                                            Number of Items (1-10):
+                                        </label>
+
+                                        <input type="number" value="1" id="items" name="items" min="1"
+                                            max="10"><br><br><br>
+
+                                        <label for="user">
+                                            Username/Email of the Merchant:
+                                        </label>
+
+                                        <input type="text" value="username" id="username" name="username"><br><br><br>
+
+
+                                        <button id="generateItems" onclick="generateItems()">
+                                            Generate
+                                        </button>
+                                        <br><br><br>
+
+                                        <div id="itemLoad" class="loader"></div>
+                                        <br>
+                                        <h3 id="itemOutput">
+                                            <br>
+                                            <br>
+                                        </h3>
+
+                                    </div>
+
+                                    <div id="Transactions" role="tabpanel" class="tabcontent tab-pane fade">
+                                        <h3>
+                                            Transactions
+                                        </h3>
+
+                                        <p>
+                                            Please note that by generating these fake transactions, your marketplace
+                                            will automatically be populated with the following details:
+
+                                        </p>
+
+                                        <p class="detailed-info">
+                                            One Category<br>
+                                            Merchant with 10 items (5 with variance and 5 without)<br>
+                                            Merchant with 2 items (1 with variance and 1 without)<br>
+                                            Merchant with 2 items (1 with variance and 1 without)<br>
+                                            Buyer with no Payment Method
+                                        </p>
+
+                                        <p>
+                                            The vast combination of these three Merchants will generate<br>
+                                            four transactions, which can be viewed under the<br>
+                                            Payments &amp; Transactions tab to your left.
+                                        </p>
+
+
+
+                                        <button id="generateTransactions" onclick="generateTransactions()">
+                                            Generate
+                                        </button>
+                                        <br><br><br>
+                                        <div id="transactionLoad" class="loader"></div>
+                                        <br>
+                                        <h3 id="transactionOutput">
+                                            <br>
+                                            <br>
+                                        </h3>
+
+                                    </div>
+
+                                    <div id="UserUpload" role="tabpanel" class="tabcontent tab-pane fade">
+                                        <h3>
+                                            User Upload
+                                        </h3>
+
+                                        <p>
+                                            Please click the button below to download the csv template to be filled in
+                                            with your custom information.<br>
+                                            NOTE: Please fill in the template with the exact parameters of the csv
+                                            template file.<br>
+                                        </p>
+                                        <p>
+                                            <span>(R)</span> indicates required input.<br>
+                                            <span>(M)</span> indicates for Merchants only.<br>
+                                        </p>
+                                        <div class="border-bottom-container clearfix">
+                                            <p class="clauses">
+                                                If you have commas within the input, put quotation marks around entire
+                                                string.<br>
+                                                Also note that the Users created will have passwords identical to their
+                                                Username/Email.<br>
+                                                You may open the .csv file in any format to edit details.
+
+                                            </p>
+                                            <button id="downloadUserTemplate" onclick="downloadUserTemplate()">
+                                                Download Template
+                                            </button>
+                                        </div>
+
+
+                                        <p>
+                                            <span class="warning-sign">WARNING:</span><br>
+                                            Please make sure that there are all information given follow the exact
+                                            parameters of the template.<br>
+                                            Please upload your updated UserTemplate.csv file below.
+                                        </p>
+
+                                        <div class="uploader-container">
+                                            <input type="file" class="fileUpload" accept=".csv" id="userFileUpload">
+                                            <input type="text" class="fileNameView" placeholder="No file selected">
+                                            <button class="browse-user-btn">
+                                                Browse
+                                            </button>
+                                        </div>
+                                        <br><br><br>
+                                        <button id="uploadUsers"
+                                            onclick="uploadUsers(document.getElementById('userFileUpload').files)">
+                                            Upload Users
+                                        </button>
+
+                                        <div id="userUploadLoad" class="loader2"></div>
+
+
+                                        <br>
+
+                                        <h3 id="userUploadOutput">
+                                            <br>
+                                        </h3>
+
+
+                                    </div>
+
+                                    <div id="ItemUpload" role="tabpanel" class="tabcontent tab-pane fade">
+                                        <h3>
+                                            Item Upload
+                                        </h3>
+
+                                        <p>
+                                            Please click the button below to download the csv template to be filled in
+                                            with your custom information.<br>
+                                            NOTE: Please fill in the template with the exact parameters of the csv
+                                            template file.<br><br>
+
+                                            <span>(R)</span> indicates required input.<br>
+
+
+                                        </p>
+
+                                        <div class="border-bottom-container clearfix">
+
+                                            <p class="clauses">
+                                                If you have commas within the input, put quotation marks around entire
+                                                string.<br>
+                                                If you have multiple inputs under the same section (i.e. Categories,
+                                                tags, etc.),<br>
+                                                separate by commas and put the entire string in quotation marks.<br>
+                                                You may open the .csv file in any format to edit details.<br><br>
+                                                <span class="italic-font">THIS FUNCTION DOES NOT SUPPORT ITEMS WITH
+                                                    VARIANCE.</span><br><br>
+                                            </p>
+
+                                            <button id="downloadItemTemplate" onclick="downloadItemTemplate()">
+                                                Download Template
+                                            </button>
+                                        </div>
+
+
+                                        <p>
+                                            <span class="warning-sign">WARNING:</span><br>
+                                            Please make sure that there are all information given follow the exact
+                                            parameters of the template.<br>
+                                            Items on your marketplace can be identical, so be careful not to upload the
+                                            same file twice to avoid doubling.<br>
+                                            Please upload your updated ItemTemplate.csv file below.
+                                        </p>
+                                        <div class="uploader-container">
+                                            <input type="file" class="fileUpload" accept=".csv" id="itemFileUpload">
+                                            <input type="text" class="itemFileNameView" placeholder="No file selected">
+                                            <button class="browse-item-btn">
+                                                Browse
+                                            </button>
+                                        </div>
+                                        <br><br><br>
+                                        <button id="uploadItems"
+                                            onclick="uploadItems(document.getElementById('itemFileUpload').files)">
+                                            Upload Items
+                                        </button>
+
+                                        <div id="itemUploadLoad" class="loader2"></div>
+
+
+                                        <br>
+
+                                        <h3 id="itemUploadOutput">
+                                            <br>
+                                        </h3>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+
+
+
+
+                        <div class="modal fade model-img-crop" id="myModalLogo" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div id="modaldialogLogo" class="html5imageupload" data-download="true"
+                                            data-save="false" data-resize="true" data-width="1280" data-height="600"
+                                            data-url="canvas.php" style="width: 100%;">
+                                            <input type="file" name="thumb" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade model-img-crop-background" id="myModalBackground" tabindex="-1"
+                            role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div id="modaldialogBackground" class="html5imageupload" data-download="true"
+                                            data-save="false" data-resize="true" data-width="1280" data-height="600"
+                                            data-url="canvas.php" style="width: 100%;">
+                                            <input type="file" name="thumb" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="InviteBuyer" class="popup popup-demo-seller in">
+                            <div class="popup-wrapper">
+                                <div class="popup-body">Invite your buyers to onboard on your private marketplace</div>
+                                <div class="pull-right">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                </div>
+                                <div class="popup-demo-content">
+                                    <div class="popoup-private-seller-img"></div>
+                                    <p>Enter your recipient emails below</p>
+                                    <p>(Use commas separate multiple recipients).</p>
+                                    <textarea placeholder="e.g: seller1@email.com, seller2@email.com"></textarea>
+                                </div>
+                                <div class="popup-footer">
+                                    <input class="mybtn btn-blue" type="button" value="Send" data-dismiss="modal">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="InviteSeller" class="popup popup-demo-seller in">
+                            <div class="popup-wrapper">
+                                <div class="popup-body">Invite your sellers to onboard on your private marketplace</div>
+                                <div class="pull-right">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                </div>
+                                <div class="popup-demo-content">
+                                    <div class="popoup-private-seller-img"></div>
+                                    <p>Enter your recipient emails below</p>
+                                    <p>(Use commas separate multiple recipients).</p>
+                                    <textarea placeholder="e.g: seller1@email.com, seller2@email.com"></textarea>
+                                </div>
+                                <div class="popup-footer">
+                                    <input class="mybtn btn-blue" type="button" value="Send" data-dismiss="modal">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade model-img-crop" id="myModal" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div id="modaldialog" class="html5imageupload" data-download="true"
+                                            data-save="false" data-resize="true" data-width="1200" data-height="800"
+                                            data-url="canvas.php" style="width: 100%;">
+                                            <input type="file" name="thumb" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Start Seller popup-->
+                        <div id="StartSelling" class="popup popup-start-seller">
+                            <div class="popup-wrapper">
+                                <div class="pull-right">
+                                    <a href="javascript:void(0)" class="close-popup" data-dismiss="modal"><i
+                                            class="icon icon-close"></i> </a>
+                                </div>
+                                <div class="popup-demo-content text-center">
+                                    <p class="">You will be brought to another page to access these features. Press okay
+                                        to
+                                        continue!</p>
+                                    <div class="fancy-checkbox"><label> <input type="checkbox" name="dont-show"
+                                                value="1" />
+                                            Don’t show me this again</label></div>
+                                </div>
+                                <div class="popup-footer">
+                                    <a href="#" class="mybtn btn-grey" data-dismiss="modal">Cancel</a>
+                                    <a href="https://bootstrap.arcadier.com/marketplace/seller_items.html"
+                                        class="mybtn btn-blue">Okay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Start Seller popup-->
+
+
+
+                        <div id="cover"></div>
+                        <div id="coverdark"></div>
+
+                        <!-- Link Stripe Save cofirm popop-->
+                        <div class="popup popup-save-confirm" id="link-stripe-account">
+                            <div class="popup-wrapper">
+                                <div class="popup-body">
+                                    <div align="center">
+                                        <h2 class="red-bold">Warning! </h2>
+                                    </div>
+                                    <div class="text-center content-text">Changing this value will affect all the weight
+                                        units on<br>your marketplace.</div>
+                                </div>
+                                <div class="popup-footer text-center">
+                                    <input onclick="popupConfirm_close('link-stripe-account');" class="mybtn btn-grey"
+                                        type="button" value="Cancel" name="cancel">
+                                    <input onclick="popupConfirm_ok();" class="mybtn btn-blue" type="button"
+                                        value="Okay" name="cancel">
+                                </div>
+                                <a href="javascript:void(0)" class="close-popup"
+                                    onclick="popupConfirm_close('link-stripe-account');"><i class="icon icon-close"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Link Stripe  end Save cofirm popop -->
+                        <div class="popup-area item-remove-popup" id="DeleteCustomMethod">
+                            <div class="wrapper">
+                                <div class="title-area text-capitalize">
+                                    <h1>REMOVE ITEM</h1>
+                                </div>
+                                <div class="content-area">
+                                    <p>You sure about removing this item from your
+                                        list? (It'll be gone forever!)</p>
+                                </div>
+                                <div class="btn-area">
+                                    <div class="pull-left">
+                                        <input onclick="cancel_remove();" type="button" value="CANCEL"
+                                            class="my-btn btn-black">
+                                    </div>
+                                    <div class="pull-right">
+                                        <input data-key="" data-id="" onclick="confirm_remove(this);" type="button"
+                                            value="Okay" class="my-btn btn-saffron">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-area popup-confirm-opt" id="popupConfirmOpt">
+                            <div class="wrapper">
+                                <div class="content-area text-center">
+                                    <p><strong class="text text-danger">Warning!</strong> This will change how the rates
+                                        are calculated</p>
+                                    <br>
+                                </div>
+                                <div class="btn-area text-center">
+                                    <input onclick="popupConfirmAction('save')" class="my-btn btn-black" type="button"
+                                        value="Okay">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function readURL1(input1) {
+
+                console.log(input1.files[0]);
+
+                if (input1.files && input1.files[0]) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+
+                        console.log(e.target);
+
+                        var container = jQuery(".private-setting-marketplace-logo");
+
+                        container.html('');
+
+                        var pImage = "<img src=" + e.target.result + " alt='image'>";
+
+                        container.append(pImage);
+
+                        jQuery(".browse-control-logo [name=file_name1]").val(input1.files[0]['name']);
+
+                    }
+
+                    reader.readAsDataURL(input1.files[0]);
+
+                }
+
+            }
+
+            function readURL2(input) {
+
+                console.log(input.files[0]);
+
+                if (input.files && input.files[0]) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+
+
+                        jQuery(".browse-control-background [name=file_name2]").val(input.files[0]['name']);
+
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+
+                }
+
+            }
+
+            jQuery("#myModal").on('shown.bs.modal', function () {
+                jQuery('#modaldialog').html5imageupload({});
+            });
+
+            /*fixed canvas size issue while edit*/
+            jQuery("#myModal").on('show.bs.modal', function () {
+                jQuery(window).resize('trigger');
+
+            });
+
+            jQuery('.model-img-crop a.download').attr('data-dismiss', 'modal');
+
+            jQuery('body').on('click', '.model-img-crop .download', function () {
+
+                var src = jQuery(this).attr('href');
+
+                var name = jQuery(this).attr('download');
+
+                jQuery(".browse-control input[name='file_name']").val(name);
+
+                jQuery(".cover-photo.bg-image-photo").html('');
+
+                jQuery(".cover-photo.bg-image-photo").append("<img src=" + src + " alt=" + name + ">");
+
+                jQuery("#myModal").modal("hide")
+
+                return false;
+
+            });
+
+            $(document).ready(function () {
+
+                $("#btnSavePrivateSetting").click(function () {
+                    $(".private-setting-body1").css("display", "none");
+                    $(".private-setting-body2").css("display", "block");
+                });
+
+                $('.private-setting-click').click(function () {
+
+                    $(".private-setting-click.active").removeClass("active");
+
+                    $(".private-setting-click span.set-tick-check").removeClass("set-tick-check");
+
+                    $(this).addClass('active');
+
+                    $(this).find("span").addClass("set-tick-check");
+
+                });
+                $(".btn-configure").click(function () {
+
+                    $(".private-setting-body1").css("display", "block");
+
+                    $(".private-setting-body2").css("display", "none");
+                });
+
+            });
+
+            function hide_image_popup() {
+                jQuery("#coverdark").fadeOut();
+                jQuery("#large_image_popup").fadeOut();
+            }
+
+            $('ul.layout-tabs li').click(function () {
+
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.layout-tabs li').removeClass('layout-current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('layout-current');
+                $("#" + tab_id).addClass('current');
+            })
+
+            jQuery.tablesorter.addParser({
+                // set a unique id
+                id: 'dcurrency',
+                is: function (s) {
+                    // return false so this parser is not auto detected
+                    return false;
+                },
+                format: function (s) {
+                    // format your data for normalization
+                    return s.replace(/[^0-9\.]+/g, ").replace(/,/g, ");
+                },
+                // set type, either numeric or text
+                type: 'decimal'
+            });
+
+            $("#merchants-tables").tablesorter({
+                headers: {
+                    4: {
+                        sorter: 'dcurrency'
+                    }
+                },
+            });
+
+
+            $("#buyers-tables").tablesorter({
+                headers: {
+                    4: {
+                        sorter: 'dcurrency'
+                    }
+                },
+            });
+
+            $("#time-based-tables").tablesorter({
+                headers: {
+                    4: {
+                        sorter: 'dcurrency'
+                    }
+                },
+            });
+
+            jQuery(window).bind('scroll', function () {
+                jQuery(".sidebar").getNiceScroll().resize();
+            });
+
+            jQuery(".mobi-header .navbar-toggle").click(function (e) {
+                e.preventDefault();
+                jQuery("body").toggleClass("sidebar-toggled");
+            });
+
+            jQuery(".navbar-back").click(function () {
+                jQuery(".mobi-header .navbar-toggle").trigger('click');
+            });
+
+
+
+            /*nice scroll */
+            jQuery(".sidebar").niceScroll({
+                cursorcolor: "#000",
+                cursorwidth: "6px",
+                cursorborderradius: "5px",
+                cursorborder: "1px solid transparent",
+                touchbehavior: true
+            });
+
+            jQuery(".sidebar .section-links li > a").click(function () {
+                jQuery(".sidebar .section-links li").removeClass('active');
+                jQuery(this).parents('li').addClass('active');
+            });
+
+            $(document).ready(function () {
+                var watermark = 'Members Only';
+                $('.txt-watermark').val(watermark).addClass('watermark');
+
+                $('.txt-watermark').blur(function () {
+                    if ($(this).val().length == 0) {
+                        $(this).val(watermark).addClass('watermark');
+                    }
+                });
+                $('.txt-watermark').focus(function () {
+                    if ($(this).val() == watermark) {
+                        $(this).val('').removeClass('watermark');
+                    }
+                });
+                var watermarklink = 'www.example.com';
+                $('.txt-watermark-link').val(watermarklink).addClass('watermark');
+
+                $('.txt-watermark-link').blur(function () {
+                    if ($(this).val().length == 0) {
+                        $(this).val(watermarklink).addClass('txt-watermark-link');
+                    }
+                });
+                $('.txt-watermark-link').focus(function () {
+                    if ($(this).val() == watermarklink) {
+                        $(this).val('').removeClass('txt-watermark-link');
+                    }
+                });
+                $(".page-private-setting .onoffswitch-checkbox").click(function () {
+                    if (!$('.page-private-setting .private-setting-switch input[name=onoffswitch]').is(
+                        ':checked')) {
+                        $(".private-setting-container-switch").css("background", "#e8edf0");
+                        $(".private-setting-body1").addClass("hide");
+                        $(".private-setting-body2").addClass("hide");
+                    } else {
+                        $(".private-setting-container-switch").css("background", "#fff");
+                        $(".private-setting-body1").removeClass("hide");
+                        $(".private-setting-body2").removeClass("hide");
+                    }
+                });
+            });
+            // Struip connect functions
+
+            function popupCoonectStrip_ok() {
+                jQuery("#cover").fadeOut();
+
+                jQuery("#connect-edit-btn").hide();
+                jQuery("#connect-save-btn").show();
+            }
+            // End stripe connect functions
+
+            // Set link stripe functions
+            function popupConfirm_close(closeid) {
+                jQuery("#cover").fadeOut();
+                jQuery("#" + closeid).fadeOut();
+            }
+
+            function popupConfirm_ok() {
+                jQuery("#cover").fadeOut();
+                jQuery("#link-stripe-account").fadeOut();
+
+                jQuery("#unit_force").prop("readonly", false);
+                jQuery("#edit-btn").hide();
+                jQuery("#save-btn").show();
+            }
+
+            function MakeUneditable() {
+                var e = false;
+                jQuery("#unit_force.required").each(function () {
+                    var val = jQuery(this).val();
+                    var attr = jQuery(this).attr('id');
+                    if (jQuery.trim(val) == '') {
+                        e = true;
+                        jQuery(this).addClass('error-con');
+                    }
+
+                });
+                if (!e) {
+                    jQuery("#unit_force").prop("readonly", true);
+                    jQuery("#save-btn").hide();
+                    jQuery("#edit-btn").show();
+                }
+
+            }
+
+            function SaveConfirm() {
+                var e = false;
+                jQuery("#unit_force .required").each(function () {
+                    var val = jQuery(this).val();
+                    var attr = jQuery(this).attr('id');
+                    if (jQuery.trim(val) == '') {
+                        e = true;
+                        jQuery(this).addClass('error-con');
+                    }
+
+                });
+                if (!e) {
+                    jQuery("#cover").fadeIn();
+                    jQuery("#link-stripe-account").fadeIn();
+                }
+            }
+        </script>
+        <script type="text/javascript"
+            src="https://bootstrap.arcadier.com/adminportal/js/custom-nicescroll.js"></script>
+        <script type="text/javascript">
+            function popupConfirmAction(action) {
+                var $popup = $('#popupConfirmOpt');
+                var $cover = $('#cover');
+                switch (action) {
+                    case 'save':
+                        $('.option_box input[type="radio"].active').trigger('click');
+                        $popup.fadeOut();
+                        $cover.fadeOut();
+                        break;
+                    default:
+                        $('.option_box input[type="radio"]').removeClass('active');
+                        $popup.fadeOut();
+                        $cover.fadeOut();
+                }
+                $('.option_box input[type="radio"]').removeClass('active');
+            }
+
+            function saveDeliveryRate() {
+                var $section = $('.section-add-delivery-rate');
+                var $rate_name = $section.find('input[name=rate_name]');
+                var $range_start = $section.find('input[name=range_start]');
+                var $range_end = $section.find('input[name=range_end]');
+                var $rate_cost = $section.find('input[name=rate_cost]');
+                var onwards = $section.find('#Onwards').is(":checked") ? true : false;
+                var error = false;
+                var getLastRangeVal = $(".list-body > .list_row:last-child() .added_range").attr("data-last-val");
+                console.log(getLastRangeVal);
+                var range_start = parseFloat($range_start.val()).toFixed(2);
+                var range_end = parseFloat($range_end.val()).toFixed(2);
+                var $val_onwards = $section.find('#input_onwards');
+
+                if (!$.trim($rate_name.val())) {
+                    $rate_name.addClass('error-con');
+                    error = true;
+                }
+
+                if (!onwards) {
+                    if (!$.trim($range_start.val())) {
+                        $range_start.addClass('error-con');
+                        error = true;
+                    }
+
+                    if (!$.trim($range_end.val())) {
+                        $range_end.addClass('error-con');
+                        error = true;
+                    }
+
+                    if (!$.trim($rate_cost.val())) {
+                        $rate_cost.addClass('error-con');
+                        error = true;
+                    }
+
+                    var errorLowerValue = '';
+                    $('.range-box .text').remove();
+                    if ($.trim($range_start.val())) {
+                        if (Number($.trim($range_start.val())) <= Number(getLastRangeVal)) {
+                            error = true;
+                            errorLowerValue = $('.range-box').append(
+                                '<div class="text text-danger">Cannot be smaller than or equal to last value ' +
+                                getLastRangeVal + '</div>');
+                            errorLowerValue;
+                        }
+                        if ($.trim($range_end.val()) && $.trim($range_start.val()) && errorLowerValue == '') {
+                            var range_x = parseFloat($range_start.val());
+                            var range_y = parseFloat($range_end.val());
+                            if (range_y <= range_x) {
+                                error = true;
+                                $('.range-box').append('<div class="text text-danger">Cannot be smaller than or equal to ' +
+                                    range_x + '</div>');
+                            }
+                        }
+                    }
+                } else {
+                    if (!$.trim($val_onwards.val())) {
+                        $val_onwards.addClass('error-con');
+                        error = true;
+                    }
+                    if ($.trim($val_onwards.val())) {
+                        if (!$.trim($rate_cost.val())) {
+                            $rate_cost.addClass('error-con');
+                            errorCon = true;
+                        } else if (Number($.trim($val_onwards.val())) <= Number(getLastRangeVal)) {
+                            error = true;
+                            $('.range-box').append(
+                                '<div class="text text-danger">Cannot be smaller than or equal to last value ' +
+                                getLastRangeVal + '</div>');
+                        } else {
+                            $("#btnSaveDeliveryRate").addClass("not-allowed");
+                            $(".grey_fill_box > .edit_fill_form_grey").addClass("disabled");
+                            $(".grey_fill_box > .edit_fill_form_grey .range-box .text-danger").remove();
+                            $(".grey_fill_box > .edit_fill_form_grey").prepend(
+                                "<div class='text text-danger'>Unable to add new calculation if latest is set to 'onwards'</div>"
+                            );
+                        }
+                    }
+                }
+
+                if (!$.trim($rate_cost.val())) {
+                    $rate_cost.addClass('error-con');
+                    error = true;
+                }
+
+
+                if (!error) {
+                    var range = range_start + ' - ' + range_end;
+                    if (onwards) {
+                        range = '> ' + parseFloat($.trim($val_onwards.val())).toFixed(2) + ' onwards';
+                    }
+                    var template =
+                        `<div class="list_row">
+                        <div class="col-md-4">
+                            <p>` +
+                        $.trim($rate_name.val()) +
+                        `</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="added_range" data-last-val=` + range_end + `>
+                                <p>` + range + `</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <p>SGD $` +
+                        parseFloat($.trim($rate_cost.val())).toFixed(2) +
+                        `</p>
+                            <div class="item-actions">
+                                <ul>
+                                    <li><a href="javascript:void(0)" onclick="DeleteCustomMethod(this)"><i class="icon icon-delete"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>`;
+                    $('.take_data_edit_list .list-body > .list_row:last-child() .item-actions').remove();
+                    $('.take_data_edit_list .list-body').append(template);
+                    $rate_name.val('');
+                    $range_start.val('');
+                    $range_end.val('');
+                    $rate_cost.val('');
+                    $val_onwards.val('');
+                    $section.slideUp();
+                    $(".edit_fill_form_grey > form input").removeClass("error-con");
+                    $(".element-onwards").addClass("hide");
+                }
+            }
+            $(window).load(function () {
+                dynmic_align();
+                $(window).resize(function () {
+                    dynmic_align();
+                });
+            });
+
+            function confirm_remove(ele) {
+                jQuery('.list-body .list_row.confirm-delete').remove();
+                cancel_remove(ele);
+                $(".grey_fill_box > .edit_fill_form_grey").removeClass("disabled");
+                $(".grey_fill_box > .edit_fill_form_grey .text-danger").remove();
+                $(".grey_fill_box > .edit_fill_form_grey .range-box .text-danger").remove();
+
+                var $append = '<div class="item-actions">' +
+                    '<ul>' +
+                    '<li><a href="javascript:void(0)" onclick="DeleteCustomMethod(this)"><i class="icon icon-delete"></i></a></li>' +
+                    '</ul>' +
+                    '</div>';
+                $('.take_data_edit_list .list-body > .list_row:last-child() > .col-md-4:last-child()').append($append);
+
+            }
+
+            function cancel_remove(ele) {
+                var that = jQuery(ele);
+                jQuery(".popup-area.item-remove-popup").fadeOut();
+                jQuery("#cover").fadeOut();
+                jQuery('.list-body .list_row').removeClass('confirm-delete');
+            }
+
+            function DeleteCustomMethod(obj) {
+                jQuery("#cover").fadeIn();
+                jQuery(".popup-area.item-remove-popup").fadeIn();
+                jQuery(obj).parents('.list_row').addClass('confirm-delete');
+            }
+
+            jQuery(document).ready(function () {
+
+                jQuery('.btn-add-delivery-rate').click(function () {
+                    jQuery('.section-add-delivery-rate').slideToggle();
+                    jQuery(this).toggleClass("line");
+                });
+
+                $("body").on("change", "#Onwards", function () {
+                    if ($(this).is(":checked")) {
+                        $(".range-b").removeClass('hide');
+                        $(".range-a").addClass('hide');
+                    } else {
+                        $(".range-b").addClass('hide');
+                        $(".range-a").removeClass('hide');
+                    }
+                });
+
+                jQuery("#mobi-search").click(function () {
+                    jQuery(".search-bar").slideToggle();
+                    if (jQuery("#mobile-menu").is(":visible")) {
+                        jQuery("#mobile-menu").hide();
+                    }
+                    if (jQuery(".category-menu").is(":visible")) {
+                        jQuery(".category-menu").hide();
+                    }
+                });
+
+                /*nice scroll */
+                jQuery("#mobile-menu > ul").niceScroll({
+                    cursorcolor: "aquamarine",
+                    cursorwidth: "2px",
+                    background: "rgba(20,20,20,0.3)",
+                    cursorborder: "1px solid aquamarine",
+                    cursorborderradius: 0,
+                    touchbehavior: true
+                });
+
+                jQuery("#menu-toggle").click(function () {
+                    var target = jQuery(".category-items");
+                    var parent = jQuery(".category-menu");
+                    jQuery(parent).show();
+                    jQuery(target).slideToggle();
+                    if (jQuery("#mobile-menu").is(":visible")) {
+                        jQuery("#mobile-menu").hide();
+                    }
+                });
+
+                $('.option_box input[type="radio"]').click(function () {
+                    if ($('.option_box input[type="radio"]').hasClass('active')) {
+                        if ($(this).attr('id') == 'price') {
+                            $("span.unit_area").html("SGD $");
+                        } else {
+                            $("span.unit_area").html("kg");
+                        }
+                    } else {
+                        $('#popupConfirmOpt').fadeIn();
+                        $('#cover').fadeIn()
+                        $(this).addClass('active');
+                    }
+
+                });
+                $('.weight_option input[type="text"]').on("change", function () {
+                    var unit = $(this).val();
+                    $("span.unit_area").html(unit);
+                });
+                $('.range-box input[type="checkbox"]').click(function () {
+                    if ($(this).prop("checked") == true) {
+                        $(this).parents(".range-box").find('.txt.sort ').addClass("infinity").attr({
+                            disabled: "disabled",
+                            placeholder: " ∞ "
+                        });
+
+                    } else {
+                        $(this).parents(".range-box").find('.txt.sort ').removeClass("infinity").removeAttr(
+                            "disabled").attr("placeholder", "0.00");
+
+                    }
+                });
+
+
+                $(".onErr").on("click", function () {
+                    $(".err_msg").css("display", "block");
+                });
+
+            });
+            $(function () {
+                // initialize sol
+                $('#my-select').searchableOptionList();
+            });
+
+
+            function dynmic_align() {
+                $(".list_row .added_range").each(function () {
+                    var reporting = $(this).height();
+                    var height = $(".delivery-options .boxed_layout .item-actions").height();
+                    var padAmount = (reporting / 2) - (height / 2);
+                    $(this).next(".delivery-options .boxed_layout .item-actions").css('padding-top', padAmount);
+                });
+            }
+
+            $('.address_selection input[type="radio"]').click(function () {
+                $(".adderes_box").removeClass("selected");
+                $(this).next(".adderes_box").addClass("selected");
+            });
+
+
+            //Marketplace Populator Javascript
+            const userUploadButton = document.querySelector('.browse-user-btn');
+            const itemUploadButton = document.querySelector('.browse-item-btn');
+            const userFileUpload = document.getElementById('userFileUpload');
+            const itemFileUpload = document.getElementById('itemFileUpload');
+            const fileNameView = document.querySelector('.fileNameView');
+            const itemFileNameView = document.querySelector('.itemFileNameView');
+
+            userUploadButton.addEventListener('click', (e) => {
+                userFileUpload.click();
+            });
+
+            itemUploadButton.addEventListener('click', (e) => {
+                itemFileUpload.click();
+            });
+
+            userFileUpload.addEventListener('change', () => {
+                const name = userFileUpload.value.split(/\\|\//).pop();
+                const truncated = name.length > 20
+                    ? name.substr(name.length - 20)
+                    : name;
+                fileNameView.value = truncated;
+            });
+
+            itemFileUpload.addEventListener('change', () => {
+                const name = itemFileUpload.value.split(/\\|\//).pop();
+                const truncated = name.length > 20
+                    ? name.substr(name.length - 20)
+                    : name;
+                itemFileNameView.value = truncated;
+            });
+        </script>
     </div>
 
-    <div id="Categories" class="tabcontent centered">
-        <br><br>
-        <h3>
-            Categories <br><br>
-        </h3>
-
-        <p>
-            Please indicate the number of Categories you<br>
-            would like to generate. <br><br>
-        </p>
-
-        <label for="categories">
-            Number of Categories (1-20):
-        </label>
-
-        <input type="number" value="1" id="categories" name="categories" min="1" max="20"><br><br>
-
-        <label for="subCategories">
-            Number of Sub-Categories (0-5):
-        </label>
-
-        <input type="number" value="0" id="subCategories" name="subCategories" min="0" max="5">
-
-        <!-- 8 line breaks -->
-        <br><br><br><br><br><br><br><br>
-
-        <button id="generateCategories" onclick="generateCategories()">
-            Generate Categories
-        </button>
-
-        <div id="catLoad" class="loader"></div>
-
-        <!-- 4 line breaks -->
-        <br><br><br><br>
-
-        <h3 id="catOutput">
-            <br><br>
-        </h3>
-
-        <!-- 4 line breaks -->
-        <br><br><br><br>
-    </div>
-
-    <div id="Items" class="tabcontent centered">
-        <br><br>
-        <h3>
-            Items <br><br>
-        </h3>
-
-        <p>
-            Please indicate the number of Items you would<br>
-            like to generate and under which Merchant user. <br><br>
-        </p>
-
-        <label for="items">
-            Number of Items (1-10):
-        </label>
-
-        <input type="number" value="1" id="items" name="items" min="1" max="10"><br><br>
-
-        <label for="user">
-            Username/Email of the Merchant:
-        </label>
-
-        <input type="text" value="username" id="username" name="username">
-
-        <!-- 8 line breaks -->
-        <br><br><br><br><br><br><br><br>
-
-        <button id="generateItems" onclick="generateItems()">
-            Generate Items
-        </button>
-
-        <div id="itemLoad" class="loader"></div>
-
-        <!-- 4 line breaks -->
-        <br><br><br><br>
-
-        <h3 id="itemOutput">
-            <br><br>
-        </h3>
-
-        <!-- 4 line breaks -->
-        <br><br><br><br>
-    </div>
-
-    <div id="Transactions" class="tabcontent centered">
-        <br><br>
-        <h3>
-            Transactions <br><br>
-        </h3>
-
-        <p>
-            Please note that by generating these fake transactions,<br>
-            your marketplace will automatically be populated with<br>
-            the following details:<br><br>
-            One Category<br>
-            Merchant with 10 items (5 with variance and 5 without)<br>
-            Merchant with 2 items (1 with variance and 1 without)<br>
-            Merchant with 2 items (1 with variance and 1 without)<br>
-            Buyer with no Payment Method<br><br>
-            The vast combination of these three Merchants will generate<br>
-            four transactions, which can be viewed under the<br>
-            Payments & Transactions tab to your left. <br><br>
-        </p>
-
-        <!-- 4 line breaks -->
-        <br><br><br><br>
-
-        <button id="generateTransactions" onclick="generateTransactions()">
-            Generate Transactions
-        </button>
-
-        <div id="transactionLoad" class="loader"></div>
-
-        <!-- 4 line breaks -->
-        <br><br><br><br>
-
-        <h3 id="transactionOutput">
-            <br><br>
-        </h3>
-
-        <!-- 4 line breaks -->
-        <br><br><br><br>
-    </div>
-</div>
-
-<script src="scripts/scripts.js"></script>
+</html>
