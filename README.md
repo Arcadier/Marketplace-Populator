@@ -28,15 +28,15 @@ The same applies to the usernames of Buyers. If you would like to see the comple
 
 To use the Category Generator, click on the Categories tab at the top of the page. 
 
-<img width="1433" alt="1" src="https://user-images.githubusercontent.com/6611854/61353637-e021f180-a8a2-11e9-9ba7-5da064c7ce0e.png">
+<img width="1435" alt="1" src="https://user-images.githubusercontent.com/6611854/62360141-c8a56280-b54a-11e9-8a27-eca6335b3427.png">
 
-Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Category number. For example, if you take a look at the screenshot below, the 2 Categories that were created would have the following names: Category194 and Category195.
+Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Category number. For example, if you take a look at the screenshot below, the 2 Categories that were created would have the following names: Category234 and Category235.
 
-<img width="1429" alt="2" src="https://user-images.githubusercontent.com/6611854/61352173-4efd4b80-a89f-11e9-92ed-ecbc5e71f753.png">
+<img width="1436" alt="2" src="https://user-images.githubusercontent.com/6611854/62360142-c8a56280-b54a-11e9-8c75-6a837fe07cbf.png">
 
-As for the SubCategories, they would contain the parent Category's number as well as an alphabetical letter indicating which SubCategory: SubCategory194A and SubCategory194B, SubCategory195A and SubCategory195B (total 4 SubCategories).
+As for the SubCategories, they would contain the parent Category's number as well as an alphabetical letter indicating which SubCategory: SubCategory234A and SubCategory234B, SubCategory235A and SubCategory235B (total 4 SubCategories).
 
-<img width="1427" alt="3" src="https://user-images.githubusercontent.com/6611854/61355328-b5399c80-a8a6-11e9-8815-f540648805f7.png">
+<img width="1437" alt="3" src="https://user-images.githubusercontent.com/6611854/62360144-c8a56280-b54a-11e9-9705-1fb005e6b742.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
