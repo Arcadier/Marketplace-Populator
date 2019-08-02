@@ -72,7 +72,7 @@ To generate fake Transactions for your marketplace, no specific inputs are requi
 
 In order to view your generated Transactions, go to your marketplace's Payments & Transactions page.
 
-<img width="1419" alt="3" src="https://user-images.githubusercontent.com/6611854/61355089-2dec2900-a8a6-11e9-9861-d6324696feb9.png">
+<img width="1426" alt="3" src="https://user-images.githubusercontent.com/6611854/62362467-93e7da00-b54f-11e9-8e77-af3cd71f076f.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
