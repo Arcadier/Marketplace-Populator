@@ -32,7 +32,7 @@ To use the Category Generator, click on the Categories tab at the top of the pag
 
 Enter the number of Categories and SubCategories you would like to generate for your marketplace. Click the blue "Generate Categories" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Category number. For example, if you take a look at the screenshot below, the 2 Categories that were created would have the following names: Category234 and Category235.
 
-<img width="1436" alt="2" src="https://user-images.githubusercontent.com/6611854/62360142-c8a56280-b54a-11e9-8c75-6a837fe07cbf.png">
+<img width="1432" alt="2" src="https://user-images.githubusercontent.com/6611854/62361333-6568ff80-b54d-11e9-95b9-d52c09664bb6.png">
 
 As for the SubCategories, they would contain the parent Category's number as well as an alphabetical letter indicating which SubCategory: SubCategory234A and SubCategory234B, SubCategory235A and SubCategory235B (total 4 SubCategories).
 
@@ -44,19 +44,19 @@ As for the SubCategories, they would contain the parent Category's number as wel
 
 To use the Item Generator, click on the Items tab at the top of the page. 
 
-<img width="1435" alt="1" src="https://user-images.githubusercontent.com/6611854/61353633-de582e00-a8a2-11e9-8d63-a165e2b6c390.png">
+<img width="1433" alt="1" src="https://user-images.githubusercontent.com/6611854/62361325-6437d280-b54d-11e9-92c6-a585db454442.png">
 
-Enter the number of Items, and under which Merchant (by username), you would like to generate for your marketplace. Click the blue "Generate Items" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Item number. If you take a look at the screenshot below, the 4 Items that were created would have the following names: Item547, Item548, Item549, Item550 (Basically 547-550).
+Enter the number of Items, and under which Merchant (by username), you would like to generate for your marketplace. Click the blue "Generate Items" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the Item number. If you take a look at the screenshot below, the 4 Items that were created would have the following names: Item689, Item690, Item691, Item692 (Basically 689-692).
 
-<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61352745-b36cda80-a8a0-11e9-949d-f2f9ee193217.png">
+<img width="1435" alt="2" src="https://user-images.githubusercontent.com/6611854/62361326-6437d280-b54d-11e9-9017-320133e3e49d.png">
 
 If an invalid username or email is entered, an error message will appear indicating a failure to generate the items for that specific Merchant.
 
-<img width="1432" alt="3" src="https://user-images.githubusercontent.com/6611854/61353068-71906400-a8a1-11e9-9d3f-2cc2f2115526.png">
+<img width="1434" alt="3" src="https://user-images.githubusercontent.com/6611854/62361327-6437d280-b54d-11e9-947f-15ceb4caf9ef.png">
 
 If you would like to see the results of your Item Generator, go to the User page of your marketplace where you will be able to see the various listings created.
 
-<img width="1433" alt="4" src="https://user-images.githubusercontent.com/6611854/61355167-5aa04080-a8a6-11e9-93b9-b101ddd9c235.png">
+<img width="1436" alt="4" src="https://user-images.githubusercontent.com/6611854/62361329-64d06900-b54d-11e9-9d05-1bbdbb64761d.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
