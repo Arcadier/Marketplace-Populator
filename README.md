@@ -10,17 +10,17 @@ This article will contain all the necessary info on the functionality, flexibili
 
 To use the User Generator, click on the Users tab at the top of the page.
 
-<img width="1438" alt="1" src="https://user-images.githubusercontent.com/6611854/61353630-dd270100-a8a2-11e9-90c1-985d2241a3f6.png">
+<img width="1428" alt="1" src="https://user-images.githubusercontent.com/6611854/62359667-dd352b00-b549-11e9-8e9b-2d0278f8b982.png">
 
 Enter the number of Merchants and Buyers you would like to generate for your marketplace. Click the blue "Generate Users" button. Once you receive the Success message, the numbers within the \[\] brackets indicate the User number. For example, if you take a look at the screenshot below, the 5 Merchants that were created would have the following 
 s:
-Merchant1773, Merchant1774, Merchant1775, Merchant1776, Merchant1777 (Basically 1773-1777).
+Merchant1920, Merchant1921, Merchant1922, Merchant1923, Merchant1924 (Basically 1920-1924).
 
-<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61354421-b8338d80-a8a4-11e9-8b9a-aa7e7a344741.png">
+<img width="1439" alt="2" src="https://user-images.githubusercontent.com/6611854/62359670-dd352b00-b549-11e9-9f69-e8781dd39bfb.png">
 
 The same applies to the usernames of Buyers. If you would like to see the complete list of your generated Users, go to your marketplace's User Management page.
 
-<img width="1419" alt="3" src="https://user-images.githubusercontent.com/6611854/61354472-d13c3e80-a8a4-11e9-9484-411bbad6c771.png">
+<img width="1412" alt="3" src="https://user-images.githubusercontent.com/6611854/62359671-ddcdc180-b549-11e9-8926-1f56193c2a59.png">
 
 -----------------------------------------------------------------------------------------------------------------------------
 
