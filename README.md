@@ -107,6 +107,7 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
     * Will create User but not Shipping Method
   * Invalid Combined Price
     * Will create User but not Shipping Method
+All errors will indicate which User has encountered which issue.
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -133,3 +134,4 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
   * Invalid Currency Code
   * Invalid Categories
     * Item will still be created as long as there is **ONE** valid Category
+All errors will indicate which Item has encountered which issue.
