@@ -64,11 +64,11 @@ If you would like to see the results of your Item Generator, go to the User page
 
 To use the Transaction Generator, click on the Transactions tab at the top of the page. 
 
-<img width="1435" alt="1" src="https://user-images.githubusercontent.com/6611854/61353715-0e9fcc80-a8a3-11e9-86e6-e16fb47261ec.png">
+<img width="1438" alt="1" src="https://user-images.githubusercontent.com/6611854/62446019-4a3c0100-b794-11e9-960a-247e813f54ea.png">
 
 To generate fake Transactions for your marketplace, no specific inputs are required. Simply click the blue "Generate Categories" button and the Transactions will be made. You do not need to initialize anything before generating fake Transactions as all of the information is hard coded. In other words, your marketplace can be completely empty to generate Transactions. Please note that in order to generate fake Transactions, some variables are automatically generated which are indicated in the screenshot below. Once you receive the Success message, you will be given the username of the generated Buyer which is involved in all 10 transactions created.
 
-<img width="1434" alt="2" src="https://user-images.githubusercontent.com/6611854/61355553-46107800-a8a7-11e9-8307-9b6fc1a429e6.png">
+<img width="1436" alt="2" src="https://user-images.githubusercontent.com/6611854/62446022-4ad49780-b794-11e9-9545-a8d7cf47fce0.png">
 
 In order to view your generated Transactions, go to your marketplace's Payments & Transactions page.
 
@@ -122,6 +122,7 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
  * If any part of your input contains commas(","), put quotation marks around the entire input
    * Example: "This is my description, that contains, a lot, of commas,,,"
    * Please do this for multiple Categories and/or multiple Tags
+ * This Plug-In does not support items with variance
  
   [2 - input]
  
