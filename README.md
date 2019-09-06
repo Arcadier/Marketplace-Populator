@@ -80,7 +80,7 @@ In order to view your generated Transactions, go to your marketplace's Payments 
 
 To upload defined Users onto your marketplace, click on the Upload Users tab at the top of the page.
 
-[1]
+<img width="1436" alt="1" src="https://user-images.githubusercontent.com/6611854/64399064-b4004100-d099-11e9-87ff-5d834559fc40.png">
 
 This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the User Template csv file and follow the instructions and parameters carefully. Take note of the following rules/warnings to prevent errors of any sort:
  * (R) indicates that the input for that section is Required
@@ -88,8 +88,6 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
  * If any part of your input contains commas(","), put quotation marks around the entire input
    * Example: "This is my description, that contains, a lot, of commas,,,"
  * Users created will have initializing passwords identical to their respective Username/Email
- 
- [2 - input]
  
  After uploading the file, click on Upload Users to complete the generation. Please take note of the following errors that may result in a miscreation or an incorrect update:
   * The Username/Email already exists
@@ -109,13 +107,15 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
     * Will create User but not Shipping Method
 All errors will indicate which User has encountered which issue.
 
+<img width="1436" alt="2" src="https://user-images.githubusercontent.com/6611854/64399065-b4004100-d099-11e9-9ac4-73f6d167dc88.png">
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 ## Uploading Items
 
 To upload defined Items onto your marketplace, click on the Upload Items tab at the top of the page.
 
-[1]
+<img width="1434" alt="1" src="https://user-images.githubusercontent.com/6611854/64399056-b1055080-d099-11e9-91e1-bdad25dd621b.png">
 
 This section of the Plug-In makes use of csv files in order to incorporate established data from the marketplace Administrator. Download the Item Template csv file and follow the instructions and parameters carefully. Take note of the following rules/warnings to prevent errors of any sort:
  * (R) indicates that the input for that section is Required
@@ -123,8 +123,6 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
    * Example: "This is my description, that contains, a lot, of commas,,,"
    * Please do this for multiple Categories and/or multiple Tags
  * This Plug-In does not support items with variance
- 
-  [2 - input]
  
  After uploading the file, click on Upload Users to complete the generation. Please take note of the following errors that will result in an error, causing that specific item to not be created:
   * The User does not exist on your marketplace
@@ -136,3 +134,5 @@ This section of the Plug-In makes use of csv files in order to incorporate estab
   * Invalid Categories
     * Item will still be created as long as there is **ONE** valid Category
 All errors will indicate which Item has encountered which issue.
+
+<img width="1437" alt="2" src="https://user-images.githubusercontent.com/6611854/64399059-b1055080-d099-11e9-9af8-ef5aa98565c9.png">
